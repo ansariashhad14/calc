@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Balloons Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <div class="main">
+      <form name="cal">
+         <input type="text" name="display" id="display" placeholder="0" readonly>
+         <br>
+         <div class="button-box">
+            <input type="button" class="btn" value="7" onclick="cal.display.value += '7'">
+            <input type="button" class="btn" value="8" onclick="cal.display.value += '8'">
+            <input type="button" class="btn" value="9" onclick="cal.display.value += '9'">
+            <input type="button" class="btn a" value="+" onclick="cal.display.value += '+'">
+            <br>
+            <input type="button" class="btn" value="4" onclick="cal.display.value += '4'">
+            <input type="button" class="btn" value="5" onclick="cal.display.value += '5'">
+            <input type="button" class="btn" value="6" onclick="cal.display.value += '6'">
+            <input type="button" class="btn a" value="-" onclick="cal.display.value += '-'">
+            <br>
+            <input type="button" class="btn" value="1" onclick="cal.display.value += '1'">
+            <input type="button" class="btn" value="2" onclick="cal.display.value += '2'">
+            <input type="button" class="btn" value="3" onclick="cal.display.value += '3'">
+            <input type="button" class="btn a" value="*" onclick="cal.display.value += '*'">
+            <br>
+            <input type="button" class="btn b" value="C" onclick="cal.display.value = ''">
+            <input type="button" class="btn" value="0" onclick="cal.display.value += '0'">
+            <input type="button" class="btn a" value="/" onclick="cal.display.value += '/'">
+            <input type="button" class="btn a" value="=" onclick="cal.display.value = eval(cal.display.value)">
+         </div>
+      </form>
+   </div>
+
+   <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: "Poppins", sans-serif;
+       }
+       body {
+           background-color: aqua;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           height: 100vh;
+       }
+       .main {
+           width: 90%;
+           max-width: 350px;
+           background-color: white;
+           border-radius: 15px;
+           box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+           padding: 20px;
+       }
+       #display {
+           border: none;
+           outline: none;
+           width: 100%;
+           height: 50px;
+           color: white;
+           font-size: 25px;
+           font-weight: 700;
+           padding: 10px;
+           text-align: right;
+           background-color: black;
+           border-top-left-radius: 15px;
+           border-top-right-radius: 15px;
+           margin-bottom: 20px;
+       }
+       .button-box {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+           margin: 0 auto;
+       }
+       .btn {
+           width: 22%;
+           height: 60px;
+           margin: 8px 0;
+           border: none;
+           outline: none;
+           cursor: pointer;
+           font-size: 28px;
+           border-radius: 50px;
+           background: #ecedef;
+           color: black;
+           transition: background-color 0.3s, color 0.3s;
+       }
+       .btn:hover {
+           background-color: burlywood;
+           color: aliceblue;
+       }
+       .a {
+           background-color: red;
+       }
+       .a:hover {
+           background-color: black;
+           color: white;
+       }
+       .b {
+           background-color: brown;
+       }
+       .b:hover {
+           background-color: black;
+       }
+   </style>
+</body>
+</html>
